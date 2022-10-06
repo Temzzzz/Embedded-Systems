@@ -13,7 +13,7 @@ LCD_16X2_DISPLAY lcd;
 int main()
 {
     // Write to serial terminal on host PC
-    printf("Hello World\n");
+    printf("Hello World\n"); // This prints hello world, and leaves a new line after. so any other prints that happen after this one. go on a new line. this appears on the computer with mbed studio
 
     // Clear the LCD screen
     lcd.cls();
@@ -27,7 +27,7 @@ int main()
     ledBlue = 0;
 
     // Write to LCD using the LCD_16X2_DISPLAY driver class
-    lcd.printf("Hello World");
+    lcd.printf("Hello World"); // this prints hello world on the microcontroller
     lcd.locate(1, 0);   //Row 1, Col 0
     lcd.printf("ELEC143");
 
@@ -38,13 +38,14 @@ int main()
     while (true)
     {
         //Toggle the LED
-        ledBlue = !ledBlue;
-
+        ledBlue = !ledBlue; // this switches the led value whatever it isnt currently
+        ledGreen = !ledGreen;
+        ledRed = !ledRed;
         //Add 1 to the counter "variable"
-        counter = counter + 1;
+        counter = counter + 1; // this adds one to the current value the counter variable equals. 
 
         //Display in the terminal
-        printf("Count: %d\n", counter);
+        printf("Count: %d\n", counter); // this prints counter on a new line each time. it is not the same text every time
 
         //Wait
         wait_us(WAIT_TIME_MS * 1000);
