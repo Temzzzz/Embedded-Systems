@@ -48,18 +48,18 @@ int main()
     printf("A very large number in hex %llX\n", NN);
 
     // unsigned
-    unsigned short p = 1; //16 bit
-    printf("unsigned int p = %u\n", p);
+     unsigned short p = 1; //16 bit
+    printf("unsigned int p = %d\n", p);
     p = p - 2;
     printf("Subtract 2. Now unsigned int p = %u\n", p);
 
     // float 
     float pi_float = 3.1415926536;
-    printf("The value of pi is approximately %f\n", pi_float);
+    printf("The value of pi is approximately %.20f\n", pi_float);
 
     // double
     double pi_double = 3.1415926536l;
-    printf("The value of pi is approximately %lf\n", pi_double);
+    printf("The value of pi is approximately %.20lf\n", pi_double);
 
     // Data type sizes (in bytes)
     printf("Size of a char is %d bytes\n", sizeof(char));
